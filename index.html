@@ -39,7 +39,7 @@
                     <!-- task -->
                     <div class="flex gap-2 items-center">
                         <img class="w-8" src="./assets/checkbox.png" alt="">
-                        <p class="font-bold text-2xl">23</p>
+                        <p id="task-completed" class="font-bold text-2xl">23</p>
                     </div>
                     <img class="w-9 h-9" src="./assets/theme-btn.png" alt="">
                 </div>
@@ -60,7 +60,7 @@
                                 </div>
                                 <div>
                                     <p>Task Assigned </p>
-                                    <h3 class="font-bold text-3xl">06</h3>
+                                    <h3 id="task-remaining" class="font-bold text-3xl">6</h3>
                                 </div>
                             </div>
                             <!-- card 2 -->
@@ -203,9 +203,13 @@
                             <img class="w-6 h-6" src="./assets/activity.png" alt="">
                             <p class="font-medium text-xl">Activity Log</p>
                         </div>
-                        <button class=" text-white font-medium btn-task px-3 py-2 bg-[#3752FD] rounded-lg">Clear
+                        <button id="btn-clear" class=" text-white font-medium  px-3 py-2 bg-[#3752FD] rounded-lg">Clear
                             History</button>
                     </div>
+                    <!-- all activities will be displayed here -->
+                     <div id="activity-container">
+
+                     </div>
                 </section>
 
             </section>
@@ -216,8 +220,10 @@
     </section>
 
     <script src="./script/utilities.js"></script>
+    
     <script src="./script/task.js"></script>
     <script src="./script/time.js"></script>
+    
 </body>
 
 </html>
