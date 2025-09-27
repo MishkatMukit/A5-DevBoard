@@ -9,3 +9,5 @@ let year = time.getFullYear()
 let fullDate = `${month} ${date} ${year}`
 setInnerTextByIDandValue('header-day',day)
 setInnerTextByIDandValue('header-date',fullDate)
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard-discover</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body id="bg-body" class="font-poppins bg-[#F1F7FF] min-h-screen text-[#00303C]">
+    <section class="container">
+        <header class="py-5">
+            <nav class="py-4 px-5 bg-white rounded-2xl flex justify-between items-center">
+                <div class="flex items-center gap-2 jus">
+                    <img class="w-12" src="assets/logo.png" alt="">
+                    <h2 class="text-4xl">Dev<span class="font-bold">Board</span></h2>
+                </div>
+                <div class="flex gap-14">
+                    <button id="btn-back" class="text-white font-medium px-3 py-2 bg-[#3752FD] rounded-lg">Back</button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- section-title -->
+            <h1 class="text-center text-4xl font-bold my-5">Blogs</h1>
+            <!-- quesation answer container -->
+            <div class="mb-2"> 
+                <!-- question 1 -->
+                <div class="bg-white rounded-xl mb-3" >
+                    <div class="mb-2 border-b-2 border-dashed border-blue-200">
+                        <h3 class="font-bold text-lg p-4">Question-1: What are the different ways to select an element in DOM?</h3>
+                    </div>
+                    <div>
+                        <p class="text-sm opacity-70 p-4">There are several ways to select elements in the DOM using JavaScript. The most common methods include getElementById, which selects a single element by its unique ID, and getElementsByClassName or getElementsByTagName, which return collections of elements by class name or tag name, respectively. For more flexible selection, querySelector allows you to select the first element that matches a CSS selector, while querySelectorAll returns all elements matching a given CSS selector as a static NodeList. Additionally, getElementsByName can be used to select elements by their name attribute, often useful for form elements. Choosing the right method depends on whether you need a single element or a group, and whether you want to select by ID, class, tag, name, or a more complex CSS selector.</p>
+                    </div>
+                </div>
+                <!-- question 2 -->
+                <div class="bg-white rounded-xl mb-3" >
+                    <div class="mb-2 border-b-2 border-dashed border-blue-200">
+                        <h3 class="font-bold text-lg p-4">Question-2: What are the differences between innerHTML, innerText and textContent?</h3>
+                    </div>
+                    <div>
+                        <p class="text-sm opacity-70 p-4">The main differences between innerHTML, innerText, and textContent are in how they handle HTML tags and hidden content. innerHTML gets or sets the HTML markup inside an element, including any tags, so it can be used to read or write HTML structure. innerText returns only the visible text as it appears on the page, ignoring HTML tags and skipping any text hidden by CSS (like display: none). In contrast, textContent returns all the text within an element, including text that is hidden by CSS, but it ignores any HTML tags and formatting. So, use innerHTML when you need to work with HTML markup, innerText for visible text as seen by users, and textContent when you want all the raw text regardless of visibility or formatting</p>
+                    </div>
+                </div>
+                <!-- question 1 -->
+                <div class="bg-white rounded-xl mb-3" >
+                    <div class="mb-2 border-b-2 border-dashed border-blue-200">
+                        <h3 class="font-bold text-lg p-4">Question-3: What is event delegation in the DOM?</h3>
+                    </div>
+                    <div>
+                        <p class="text-sm opacity-70 p-4">Event delegation in the DOM is a technique where you attach a single event listener to a parent element instead of adding separate listeners to each child element. When an event (like a click) occurs on a child, it bubbles up through the DOM tree, and the parent’s event listener can detect it. Inside the parent’s handler, you use the event object (especially event.target) to determine which child triggered the event and respond accordingly. This approach is more efficient, especially for lists or dynamic content, because it reduces the number of event listeners in your code and automatically works for new child elements added later.</p>
+                    </div>
+                </div>
+                <!-- question 1 -->
+                <div class="bg-white rounded-xl mb-3" >
+                    <div class="mb-2 border-b-2 border-dashed border-blue-200">
+                        <h3 class="font-bold text-lg p-4">Question-4: What is event bubbling in the DOM?</h3>
+                    </div>
+                    <div>
+                        <p class="text-sm opacity-70 p-4">Event bubbling in the DOM is a process where an event that occurs on a child element first triggers any event handlers on that element, and then the event "bubbles up" to its parent elements, triggering their handlers as well, all the way up to the root of the document. For example, if you click a button inside a div, the click event will first be handled by the button, then by the div, and then by any further ancestors. This is the default behavior for most events in JavaScript, and it allows parent elements to respond to events that happen on their children without needing to attach listeners to every single child. You can stop this upward propagation by calling event.stopPropagation() inside an event handler if you want to prevent parent elements from receiving the event.</p>
+                    </div>
+                </div>
+                <!-- question 1 -->
+                <div class="bg-white rounded-xl mb-3" >
+                    <div class="mb-2 border-b-2 border-dashed border-blue-200">
+                        <h3 class="font-bold text-lg p-4">Question-5: How do you create, add or remove elements using JavaScript?</h3>
+                    </div>
+                    <div>
+                        <p class="text-sm opacity-70 p-4">To create, add, or remove elements in the DOM using JavaScript, you typically use a few core methods. To create a new element, use document.createElement('tagName'), which returns a new element node of the specified type (for example, const para = document.createElement('p');). You can then set its content using properties like innerText, textContent, or by appending a text node with document.createTextNode(). To add the new element to the page, use methods like appendChild() to add it as the last child of a parent, or insertBefore() to place it before a specific child element (e.g., parent.appendChild(para); or parent.insertBefore(para, referenceChild);). To remove an element, you can call .remove() directly on the element (e.g., element.remove();), or use parent.removeChild(childElement) if you need to support older browsers. These methods let you dynamically build, insert, and delete elements in your web page's structure.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <script src="./script/toggle.js"></script>
+</body>
+
+</html>

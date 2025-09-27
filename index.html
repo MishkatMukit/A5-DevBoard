@@ -17,7 +17,9 @@
         .font-poppins {
             font-family: "Poppins", sans-serif;
         }
-
+        .hide::-webkit-scrollbar{
+            display: none;
+        }
         .container {
             max-width: 85%;
             margin: 0 auto;
@@ -26,7 +28,7 @@
 </head>
 
 
-<body class="font-poppins bg-[#F1F7FF] min-h-screen text-[#00303C]">
+<body id="bg-body" class="font-poppins bg-[#F1F7FF] min-h-screen text-[#00303C]">
     <section class="container">
 
         <header class="py-5">
@@ -41,7 +43,7 @@
                         <img class="w-8" src="./assets/checkbox.png" alt="">
                         <p id="task-completed" class="font-bold text-2xl">23</p>
                     </div>
-                    <img class="w-9 h-9" src="./assets/theme-btn.png" alt="">
+                    <img id="btn-theme" class="w-9 h-9" src="./assets/theme-btn.png" alt="">
                 </div>
             </nav>
         </header>
@@ -52,10 +54,10 @@
                     <section>
                         <!-- task header -->
                         <!-- container -->
-                        <div class="flex gap-6">
+                        <div class="flex gap-6 mb-3">
                             <!-- card 1 -->
                             <div class="bg-[#F4F7FF] rounded-xl flex items-center px-5 py-6 gap-2 ">
-                                <div class="p-4 bg-white rounded-full">
+                                <div class="p-4 bg-white rounded-full border-2 border-blue-200">
                                     <img src="./assets/checkbox.png" alt="">
                                 </div>
                                 <div>
@@ -65,13 +67,13 @@
                             </div>
                             <!-- card 2 -->
                             <div
-                                class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] flex flex-1 gap-3 rounded-2xl justify-center items-center px-10">
+                                id="discover-new" class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] flex flex-1 gap-3 rounded-2xl justify-center items-center px-10">
                                 <img class="w-14 h-14" src="./assets/board.png" alt="">
                                 <p class="text-white font-medium text-xl">Discover Something <br> New Today!</p>
                             </div>
                             <!-- card - 3 -->
                             <div class="bg-[#F4F7FF] rounded-xl flex items-center px-5 py-6 gap-2 ">
-                                <div class="p-4 bg-white rounded-full">
+                                <div class="p-4 bg-white rounded-full border-2 border-blue-200">
                                     <img src="./assets/calender.png" alt="">
                                 </div>
                                 <div>
@@ -83,7 +85,7 @@
 
                     </section>
                     <!-- daily task section -->
-                    <section>
+                    <section class="overflow-y-scroll max-h-[400px]">
                         <!-- task container -->
                         <div class="my-4 grid grid-cols-3 gap-6">
 
@@ -93,7 +95,7 @@
                                     <span class="px-4 py-2 bg-white rounded-lg"> ShopEase</span>
                                 </div>
                                 <h1 class="font-medium text-xl">Fix Mobile Button Issue </h1>
-                                <p class="max-w-72 opacity-50 p-4 bg-white text-sm rounded-lg flex-1">Debug using Chrome
+                                <p class="max-w-72 max-h-24 opacity-50 p-4 bg-white text-sm rounded-lg flex-1 overflow-y-scroll">Debug using Chrome
                                     DevTools, check
                                     for overlapping elements, and ensure onClick works
                                     properly
@@ -111,7 +113,7 @@
                                     <span class="px-4 py-2 bg-white rounded-lg">CloudSync</span>
                                 </div>
                                 <h1 class="font-medium text-xl">Add Dark Mode</h1>
-                                <p class="max-w-72 opacity-50 p-4 bg-white text-sm rounded-lg flex-1 ">Store the user's
+                                <p class="max-w-72 max-h-24 opacity-50 p-4 bg-white text-sm rounded-lg flex-1 overflow-y-scroll ">Store the user's
                                     preference in
                                     localStorage, update CSS variables dynamically, and apply a smooth transition
                                     effect.</p>
@@ -128,7 +130,7 @@
                                     <span class="px-4 py-2 bg-white rounded-lg">SwiftPay</span>
                                 </div>
                                 <h1 class="font-medium text-xl">Optimize Home page</h1>
-                                <p class="max-w-72 opacity-50 p-4 bg-white text-sm rounded-lg flex-1">Debug using Chrome
+                                <p class="max-w-72 max-h-24 opacity-50 p-4 bg-white text-sm rounded-lg flex-1 overflow-y-scroll">Debug using Chrome
                                     DevTools, check
                                     for overlapping elements, and ensure onClick works properly
                                     and ensure onClick works properly</p>
@@ -145,7 +147,7 @@
                                     <span class="px-4 py-2 bg-white rounded-lg">Meta</span>
                                 </div>
                                 <h1 class="font-medium text-xl">Add new emoji 🤲</h1>
-                                <p class="max-w-72 opacity-50 p-4 bg-white text-sm rounded-lg flex-1">
+                                <p class="max-w-72 max-h-24 opacity-50 p-4 bg-white text-sm rounded-lg flex-1 overflow-y-scroll">
                                     Debug using Chrome DevTools, check for overlapping elements, and ensure onClick
                                     works properly
                                     and ensure onClick works properly
@@ -163,7 +165,7 @@
                                     <span class="px-4 py-2 bg-white rounded-lg">Google LLC</span>
                                 </div>
                                 <h1 class="font-medium text-xl">Integrate OpenAI API </h1>
-                                <p class="max-w-72 opacity-50 p-4 bg-white text-sm rounded-lg flex-1">Debug using Chrome
+                                <p class="max-w-72 max-h-24 opacity-50 p-4 bg-white text-sm rounded-lg flex-1 overflow-y-scroll">Debug using Chrome
                                     DevTools, check for overlapping elements, and ensure onClick works properly
                                     and ensure onClick works properly</p>
                                 <div class="flex justify-between items-center">
@@ -173,13 +175,13 @@
                                         class="text-white font-medium btn-task px-3 py-2 bg-[#3752FD] rounded-lg">Completed</button>
                                 </div>
                             </div>
-                            <!-- card-1 -->
+                            <!-- card-6 -->
                             <div class="bg-[#F4F7FF] p-6 rounded-2xl space-y-3 flex flex-col">
                                 <div>
                                     <span class="px-4 py-2 bg-white rounded-lg">Glassdoar</span>
                                 </div>
                                 <h1 class="font-medium text-xl">Improve Job searching </h1>
-                                <p class="max-w-72 opacity-50 p-4 bg-white text-sm rounded-lg flex-1">Debug using Chrome
+                                <p class="max-w-72 max-h-24 opacity-50 p-4 bg-white text-sm rounded-lg overflow-y-scroll hide">Debug using Chrome
                                     DevTools, check for overlapping elements, and ensure onClick works properly
                                     and ensure onClick works properly</p>
                                 <div class="flex justify-between items-center">
@@ -198,7 +200,7 @@
 
                 <!-- activity log -->
                 <section class="bg-white min-h-40 rounded-2xl w-1/4 p-6">
-                    <div class="flex items-center flex-col gap-5">
+                    <div class="flex items-center flex-col gap-5 mb-3">
                         <div class="flex items-center gap-3 justify-center">
                             <img class="w-6 h-6" src="./assets/activity.png" alt="">
                             <p class="font-medium text-xl">Activity Log</p>
@@ -207,7 +209,7 @@
                             History</button>
                     </div>
                     <!-- all activities will be displayed here -->
-                     <div id="activity-container">
+                     <div class="max-h-[400px] overflow-y-scroll" id="activity-container">
 
                      </div>
                 </section>
@@ -219,10 +221,12 @@
         </footer>
     </section>
 
-    <script src="./script/utilities.js"></script>
-    
+    <script src="./script/utilities.js"></script>  
     <script src="./script/task.js"></script>
     <script src="./script/time.js"></script>
+    <script src="./script/theme.js"></script>
+    <script src="./script/toggle.js"></script>
+
     
 </body>
 

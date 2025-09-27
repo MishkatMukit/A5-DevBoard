@@ -12,14 +12,13 @@ function handleToggle(id, status){
     document.getElementById(id).style.display = status;
 }
 function showTime() {
-  // Get the current date and time
   let time = new Date();
   let hour = time.getHours();
   let min = time.getMinutes();
   let sec = time.getSeconds();
   let am_pm = "AM";
 
-  // Set AM/PM format
+//   am pm format
   if (hour >= 12) {
     if (hour > 12) {
       hour -= 12;
@@ -29,13 +28,20 @@ function showTime() {
     hour = 12;
     am_pm = "AM";
   }
-
-  // Add a leading zero to single-digit numbers
+//  leading zero
   hour = hour < 10 ? "0" + hour : hour;
   min = min < 10 ? "0" + min : min;
   sec = sec < 10 ? "0" + sec : sec;
 
-  // Combine the time components into a string
   let currentTime = hour + ":" + min + ":" + sec + " " + am_pm;
   return currentTime;
+}
+
+function getRandomColor(){
+    const r = Math.floor(Math.random() * 55) + 200; 
+    const g = Math.floor(Math.random() * 55) + 200; 
+    const b = Math.floor(Math.random() * 55) + 200; 
+    
+    const hex = '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+    return hex;
 }
